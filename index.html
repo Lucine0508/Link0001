@@ -8,45 +8,182 @@
 		<script defer src="assets/arena.js"></script>
 		<script defer src="assets/main.js"></script>
 	</head>
+
+
+
+	
 	<body>
 		<section>
-			<!-- Replace this URL with your channel to connect the API! -->
-			<a href="https://www.are.na/michael-fehrenbach/typography-and-interaction-too" id="channel-url">
-				<h1 class="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+		
+			<a href="https://www.are.na/dhruv-jesrani/decolonising-indian-coffee" id="channel-url">
 			</a>
-			<div class="channel-description"></div> <!-- Same here for the channel description. -->
-			<ul class="channel-owner channel-collaborator"></ul> <!-- Owner and collaborators. -->
 		</section>
+	
 		<section>
-			<h2 class="channel-count"></h2> <!-- How many blocks. -->
-			<!-- All the channel “blocks” will be created as children, here. -->
-			<!-- You could move the classes to different section elements to separate the types! -->
-			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+			<div class = "bean-container">
+	
+				<a href="#top" >    <img src="https://d2w9rnfcy7mm78.cloudfront.net/20593612/original_ffde65b28b1a85893d9fd852002e447b.png?1677473921?bc=0" alt ="">  </a>     </div>
+			</section>
+			  
+			<div class="wrapper-outer" >
+	
+				<div class="wrapper" >
+			
+				  <div id = "nav-container">
+					<div id = "nav"> 
+					<a href="#image" class="nav-bar">Image</a>
+					<a href="#text" class="nav-bar">Text</a>
+					<a href="#video" class="nav-bar">Video</a>
+					<a href="#link" class="nav-bar-last">Link</a>
+				</div>
+			</div>
+	
+	
+			<section>
+			<div class="title-container"></div>
+			</section>
+			
+			<div id = "main-body"> 
+				<div class="top-container">
+					<div class="title" >
+						 <img src= "https://d2w9rnfcy7mm78.cloudfront.net/20593845/original_7b99bd7c5e629899ba295b005895e66f.gif?1677475747?bc=0"> </div> 
+					
+				</div>
+			</div>
+	
+
+		<section id="image">
+			
+			<ul class="image-blocks">
+			
 			</ul>
 		</section>
-		<!-- These are the templates for the various block types, below. -->
-		<!-- You can move/nest/remove any of the insertion points! -->
-		<!-- For example, you could only show images for actual image blocks. -->
-		<!-- You could not show the type if you group them by section, above. -->
-		<!-- Template for the channel owner. -->
-		<template id="channel-owner">
+
+				<!-- Images. -->
+
+		<template id="image-block">
+			<li class="image-block">
+	
+					<figure>
+						<img class="image-square">
+					</figure>
+					<aside>
+						<img class="image">
+					</aside>
+
+	
+			</li>
+	
+
+		</template>
+		
+		<section id="text">
+
+			<ul class="text-blocks">
+			</ul>
+		</section>
+
+		<!-- Text. -->
+		<template id="text-block">
 			<li>
-				<img class="avatar"> <!-- Avatar image source inserts here. -->
-				<a class="link"> <!-- Link to their profile inserts here. -->
-					<p class="full-name"></p> <!-- Username inserts here. -->
-				</a>
+				<figure class="text-block">
+					<h3 class="title"></h3>
+					<div class="content"></div> 
+					<figcaption class="description"></figcaption>
+					<p class="type"></p>
+					<p class="time-updated"></p>
+					<p class="time-created"></p>
+				</figure>
+			</li>
+		</template>	
+
+		<div id = "main-body"> 
+			<div class="top-container">
+				<div class="title" >
+					 <img src= "https://d2w9rnfcy7mm78.cloudfront.net/20593845/original_7b99bd7c5e629899ba295b005895e66f.gif?1677475747?bc=0"> </div> 
+
+				
+			</div>
+		</div>
+		
+		<section id="video">
+
+			<ul class="video-embed-blocks video-file-blocks">
+			</ul>
+		</section>	
+
+		<!-- YouTube, Vimeo, etc. -->
+		<template id="video-embed-block">
+			<div class="video-embed-blocks">
+				<figure class="video-embed-block">
+					
+					<div class="embed"></div>
+					<a class="link">
+					</a>
+			
+				</figure>
+			</div>		
+		</template>
+
+		<div id = "main-body"> 
+			<div class="top-container">
+				<div class="title" >
+					 <img src= "https://d2w9rnfcy7mm78.cloudfront.net/20593845/original_7b99bd7c5e629899ba295b005895e66f.gif?1677475747?bc=0"> 
+				</div> 
+		</div>
+
+		<section id="link">
+
+			<ul class="link-blocks">
+			</ul>
+		</section>	
+
+		
+
+		<template id="link-block">
+			<li>
+				<figure class="link-block">
+					<h3 class="title"></h3>
+					<picture>
+						<source class="image-thumb">
+						<source class="image-square">
+						<source class="image-display">
+						<img class="image">
+					</picture>
+					<a class="link">
+						<p class="link-title"></p>
+					</a>
+				</figure>
+		
 			</li>
 		</template>
-		<!-- And collaborator. -->
-		<template id="channel-collaborator">
+
+		<div id = "main-body"> 
+			<div class="top-container">
+				<div class="title" >
+					 <img src= "https://d2w9rnfcy7mm78.cloudfront.net/20593845/original_7b99bd7c5e629899ba295b005895e66f.gif?1677475747?bc=0"> 
+				</div> 
+		</div>
+		
+		<!-- Did anyone add PDFs? -->
+		<template id="pdf-block">
 			<li>
-				<img class="avatar">
-				<a class="link">
-					<p class="full-name"></p>
-				</a>
+				<figure class="pdf-block">
+					<h3 class="title"></h3>
+					<picture>
+						<source class="image-thumb">
+						<source class="image-square">
+						<source class="image-display">
+						<img class="image">
+					</picture>
+					
+
+				</figure>
 			</li>
 		</template>
- 		<!-- Spotify, Soundcloud, etc. -->
+
+
+
 		<template id="audio-embed-block">
 			<li>
 				<figure class="audio-embed"> <!-- You can use the container classes to style a whole type. -->
@@ -68,6 +205,8 @@
 				</figure>
 			</li>
 		</template>
+
+
  		<!-- Uploaded audio files. -->
 		<template id="audio-file-block">
 			<li>
@@ -87,103 +226,16 @@
 				</figure>
 			</li>
 		</template>
-		<!-- Images. -->
-		<template id="image-block">
-			<li>
-				<figure class="image-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
+
+
+
+		
 		<!-- Links (saved sites). -->
-		<template id="link-block">
-			<li>
-				<figure class="link-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
-		<!-- Did anyone add PDFs? -->
-		<template id="pdf-block">
-			<li>
-				<figure class="pdf-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link"> <!-- PDF link inserts here. -->
-						<p class="link-title"></p> <!-- Repeats the block title. -->
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
-		<!-- Text. -->
-		<template id="text-block">
-			<li>
-				<figure class="text-block">
-					<h3 class="title"></h3>
-					<div class="content"></div> <!-- Text blocks insert their HTML here. -->
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
-		<!-- YouTube, Vimeo, etc. -->
-		<template id="video-embed-block">
-			<li>
-				<figure class="video-embed-block">
-					<h3 class="title"></h3>
-					<picture>
-						<source class="image-thumb">
-						<source class="image-square">
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<div class="embed"></div>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
-				</figure>
-			</li>
-		</template>
+
+
+
+
+		
 		<!-- Uploaded video files. -->
 		<template id="video-file-block">
 			<li>
@@ -196,10 +248,7 @@
 						<img class="image">
 					</picture>
 					<video class="video" controls></video> <!-- Video source inserts here. -->
-					<figcaption class="description"></figcaption>
-					<p class="type"></p>
-					<p class="time-updated"></p>
-					<p class="time-created"></p>
+
 				</figure>
 			</li>
 		</template>
