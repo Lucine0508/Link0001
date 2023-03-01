@@ -1,15 +1,321 @@
 /* These styles are just to make it easier to see the blocks, initially. */
 
-body { padding: 2em; }
-
-a { color: blue; }
-em { font-style: italic; }
-strong { font-weight: bold; }
-
-body,
-section,
-ul,
-figure {
-	display: grid;
-	gap: 1em;
+*{
+	outline: white 0px solid;
 }
+
+html {
+	scroll-behavior: smooth;
+  }
+
+
+figure,
+img{
+	height: 100%;
+	width: 100%;
+}
+figure > img {
+	object-fit: cover;
+
+}
+
+h1{
+	font-size: 60pt;
+}
+
+body{	
+	background: rgb(18, 17, 17);
+	overflow-x: hidden;
+	}
+
+
+#image{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#link{
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+
+.link-block{
+	float: left;
+	background-color: rgb(255, 255, 255);
+	width: 200px;
+	height:100px;
+	overflow:hidden;
+	overflow: scroll;
+	border-radius: 50%;
+    flex-wrap: wrap;
+	flex-direction: row;
+	margin: 30px;
+	rotate: -8deg;
+	border: #ffffff solid 2px;
+}
+
+.link-block:hover{
+	transform: rotate(45deg);
+}
+.image-block{
+	
+	float: left;
+	width: 200px;
+	height:100px;
+	overflow:hidden;
+	border-radius: 15%;
+
+    flex-wrap: wrap;
+	flex-direction: row;
+
+    margin-left: 0.50rem;
+    margin-right: 0.50rem;
+	margin-bottom: 0.50rem;
+
+	mix-blend-mode: exclusion;
+
+}
+
+.image-block img{
+	opacity:0.5 ;
+	transition: 1s all;
+}
+
+.image-block img:hover{
+	cursor:pointer;
+	transform: scale(1.2);
+	opacity: 1;}
+
+
+#main-body{
+	text-align: center;
+}
+
+  .wrapper-outer {
+	overflow-x: hidden;
+  }
+  .wrapper {
+	width: 70%;
+	margin-left: 15%;
+	padding: 0;
+	z-index: -1;}
+
+#nav {
+	font-size: 16px;
+	margin-top: 17px;
+	display: block;
+	width: 70%;
+	margin-bottom: 40px;
+	position: fixed;
+	z-index: 9999;
+	mix-blend-mode: exclusion;}
+
+.nav-bar:hover {
+	background-color: #DCDCDC;
+	color: black;}
+
+.nav-bar-last:hover {
+  		background-color: #DCDCDC;
+  		color: black;}
+	
+.nav-bar {
+		border-top: 1px solid #DCDCDC;
+		border-left: 1px solid #DCDCDC;
+		border-radius: 15%;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-decoration: none;
+		margin-right: -5px;
+		text-align: center;
+		color: #ffffff;
+		display: inline-block;
+		width: 16.66%;	
+		}
+
+  .nav-bar-last {
+	border-top: 1px solid #DCDCDC;
+	border-left: 1px solid #DCDCDC;
+	border-right: 1px solid #DCDCDC;
+	border-radius: 15%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-decoration: none;
+	margin-right: -5px;
+	text-align: center;
+	color: #ffffff;
+	display: inline-block;
+	width: 16.66%;
+  }
+
+
+  .title img {
+	width: 80%;
+  }
+
+  #main-body {
+	position: relative;
+	display: block;
+	padding-top: 120px;
+  }
+
+  .bean-container {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	width: 15%;
+	z-index: 9999;
+	mix-blend-mode: exclusion;
+  }
+  .bean-container img {
+	width:45%;
+	float: right;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	z-index: 9999;
+	position: relative;
+	mix-blend-mode: exclusion;
+  }
+
+  .bean-container:hover{
+	cursor:pointer;
+	transform: scale(1.1) rotate(300deg);
+	
+  }
+
+  link-block h3, p{
+	color: #ffffff;
+  }
+
+  #text{
+	
+	margin-top: 100px;
+
+  }
+
+  .text-block{
+	margin-top: 50px;
+	display: flex auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+	border-top: 2px solid #DCDCDC;
+	border-left: 2px solid #DCDCDC;
+	border-right: 2px solid #DCDCDC;
+	border-radius: 40%;
+	padding: 10%;
+	overflow: hidden;
+	overflow: scroll;
+	font-size: 20px;
+	height: 500px;
+	
+  }
+
+#video{
+	 	background-color: rgb(255, 255, 255);
+		border-radius: 40%;
+	    width:100%;
+		height: 380px;
+		white-space: nowrap;
+		position: relative;
+		overflow-x: scroll;
+		display: inline-block;
+		text-align: center;
+		mix-blend-mode: exclusion;
+
+		
+}
+
+
+.video-embed-block{
+	display: inline-block;
+	border-radius: 15%;
+	width: auto;
+  	overflow: hidden;
+	margin-top: 10px;
+	outline: #ffffff 2px solid;
+	background-color: rgb(202, 31, 31);
+	
+}
+
+
+
+#video:hover {
+	transform: scale(1.2);
+}  
+
+
+.image-block aside{
+	visibility: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0pt;
+	z-index: 2;
+	padding: cal(var(--spacing)*2);
+}
+
+.image-block aside > img{
+	object-fit: contain;
+	
+}
+
+.image-block.active aside{
+	display: block;
+	opacity: 50;
+}
+
+
+
+  @media only screen and (max-width: 1000px) {
+	.nav-bar {
+		display: inline-block;
+		width: 20%;
+		height: 1%;
+		font-size: 8px;}
+		
+	.nav-bar-last {
+		display: inline-block;
+		width: 20%;
+		height: 1%;
+		font-size: 8px;}
+
+	  #main-body {
+		position: relative;
+		display: block;
+		padding-top: 120px;}
+	
+	#image{
+		margin-left: 50px;
+		margin-right: auto;
+		}	
+	#link{
+		margin-left: 25px;
+		margin-right: auto;
+			}	
+
+	
+	.text-block{
+		margin-top: 50px;
+		display: flex auto;
+		flex-wrap: wrap;
+		flex-direction: row;
+		border-top: 2px solid #DCDCDC;
+		border-left: 2px solid #DCDCDC;
+		border-right: 2px solid #DCDCDC;
+		border-radius: 40%;
+		padding: 10%;
+		overflow: hidden;
+		overflow: scroll;
+		font-size: 20px;
+		height: 500px;}
+
+	.text-block{
+
+		font-size: 10px;
+		height: 300px;
+		
+	  }	
+
+  }
