@@ -4,10 +4,17 @@
 	outline: white 0px solid;
 }
 
+iframe {
+	width: 100vw;
+	border-radius: 15%;
+  }
 html {
 	scroll-behavior: smooth;
+	
   }
-
+  ::-webkit-scrollbar {
+	width: 5px;
+  }
 
 figure,
 img{
@@ -32,11 +39,15 @@ body{
 #image{
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
+	overflow: scroll;
+	height: 330px;
 }
 
 #link{
 	margin-left: auto;
 	margin-right: auto;
+	mix-blend-mode: exclusion;
 	
 }
 
@@ -56,8 +67,14 @@ body{
 	border: #ffffff solid 2px;
 }
 
+.link-block{
+	opacity: 0.9;
+}
+
 .link-block:hover{
 	transform: rotate(45deg);
+	scale: 1.2;
+	filter: grayscale(0);
 }
 .image-block{
 	
@@ -79,18 +96,21 @@ body{
 }
 
 .image-block img{
-	opacity:0.5 ;
+	opacity:1 ;
 	transition: 1s all;
+	filter: grayscale(10);
 }
 
 .image-block img:hover{
 	cursor:pointer;
+	filter: grayscale(0);
 	transform: scale(1.2);
-	opacity: 1;}
+	opacity: 0.5;}
 
 
 #main-body{
 	text-align: center;
+	mix-blend-mode: exclusion;
 }
 
   .wrapper-outer {
@@ -103,6 +123,7 @@ body{
 	z-index: -1;}
 
 #nav {
+	font-family: 'Cabin Sketch', cursive;
 	font-size: 16px;
 	margin-top: 17px;
 	display: block;
@@ -207,6 +228,7 @@ body{
 	overflow: hidden;
 	overflow: scroll;
 	font-size: 20px;
+	font-family: 'Cabin Sketch', cursive;
 	height: 500px;
 	
   }
@@ -232,12 +254,20 @@ body{
 	border-radius: 15%;
 	width: auto;
   	overflow: hidden;
+	overflow: scroll;
 	margin-top: 10px;
-	outline: #ffffff 2px solid;
 	background-color: rgb(202, 31, 31);
 	
 }
 
+.video-embed-block{
+	filter: grayscale(10);
+	transition: 1s all;
+}
+
+.video-embed-block:hover{
+	filter: grayscale(0);
+}
 
 
 #video:hover {
@@ -252,18 +282,15 @@ body{
 	left: 0;
 	bottom: 0;
 	right: 0pt;
-	z-index: 2;
+	z-index: 1;
 	padding: cal(var(--spacing)*2);
 }
 
-.image-block aside > img{
-	object-fit: contain;
-	
-}
+
 
 .image-block.active aside{
 	display: block;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 
@@ -284,14 +311,15 @@ body{
 	  #main-body {
 		position: relative;
 		display: block;
-		padding-top: 120px;}
+		padding-top: 120px;
+		padding-bottom: 50px;}
 	
 	#image{
-		margin-left: 50px;
+		margin-left: 30px;
 		margin-right: auto;
 		}	
 	#link{
-		margin-left: 25px;
+		margin-left: 10px;
 		margin-right: auto;
 			}	
 
@@ -308,14 +336,17 @@ body{
 		padding: 10%;
 		overflow: hidden;
 		overflow: scroll;
-		font-size: 20px;
-		height: 500px;}
-
-	.text-block{
-
 		font-size: 10px;
-		height: 300px;
+		height: 300px;}
+
+	.text-blocks{
+		font-size: 10px;
 		
 	  }	
+	#video{
+		height: 250px;
+	}
+
+	
 
   }
