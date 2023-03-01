@@ -246,7 +246,7 @@ body{
 
 
 .image-block aside{
-	visibility: none;
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -263,7 +263,7 @@ body{
 
 .image-block.active aside{
 	display: block;
-	opacity: 50;
+	opacity: 0.5;
 }
 
 

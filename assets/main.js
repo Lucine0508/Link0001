@@ -1,16 +1,22 @@
 window.arenaCallback = () => {
 	// Put your JavaScript in here!
 	// This will run after Are.na’s API returns your data.
-	let imageblocks = document.querySelectorAll('li.image-block')
-	
-	imageblocks.forEach((block)=> {
-		block.onclick = () =>{
-			block.classList.add('active')
-		}
-	})
+	let imageBlocks = document.querySelectorAll('li.image-block')
 
-	block.querySelector('aside').onclick = () =>{
-		block.classList.remove('active')
-	}
-	
+	// Go through all of my image blocks
+	imageBlocks.forEach((block) => {
+	 // Make the blocks react on click
+   
+	 // Target the figure element of the block
+	 block.querySelector('figure').onclick = () => {
+	  // Add a class called active
+	  block.classList.add('active')
+	 }
+   
+	 // Target the aside element of the block
+	 block.querySelector('aside').onclick = () => {
+	  // Remove a class called active
+	  block.classList.remove('active')
+	 }
+	})
 }
