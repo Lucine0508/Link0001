@@ -31,7 +31,7 @@ h1{
 }
 
 body{	
-	background: rgb(18, 17, 17);
+	background: rgb(56, 37, 37);
 	overflow-x: hidden;
 	}
 
@@ -211,7 +211,7 @@ body{
   }
 
   link-block h3, p{
-	color: #ffffff;
+	color: #DCDCDC;
   }
 
   #text{
@@ -221,6 +221,7 @@ body{
   }
 
   .text-block{
+	color: #DCDCDC;
 	margin-top: 50px;
 	display: flex auto;
 	flex-wrap: wrap;
